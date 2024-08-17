@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-image: url(img.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordian{
+    width:65%;
+    background-color:#fff;
+    padding:30px;
+    border-radius: 30px;
+}
+.accordian .accordian_title{
+    margin-bottom: 30px;
+    text-align:center;
+
+}
+
+.accordian .content_container .question{
+    padding:18px 0px;
+    cursor:pointer;
+    font-size: 22px;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.accordian .content_container .question::after{
+    content:'+';
+    position:absolute;
+    right:5px;
+}
+
+.accordian .content_container .answer{
+    padding-top:15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width:100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.accordian .content_container.active .answer {
+    height: 150px;
+} 
+
+.accordian .content_container.active .question{
+    font-size: 18px;
+    transition:.5s;
+}
+
+.accordian .content_container.active .question::after{
+    content:'-';
+    font-size: 30px;
+    transition: .5s;
+}
+
+
+
